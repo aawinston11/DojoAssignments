@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+
+.wrapper {
+    width: 980px;
+    height: 1050px;
+    background: #f1f4f8;
+}
+
+.header {
+    width: 925px;
+    height: 40px;
+    padding: 5px;
+}
+
+.header h2 {
+    display: inline-block;
+}
+
+.header h3 {
+    display: inline-block;
+    margin-left: 450px;
+}
+
+.main {
+    width: 950px;
+    height: 900px;
+    padding: 15px 15px;
+    background: radial-gradient(silver, #6e5863, #200e13);
+}
+
+.main img {
+    width: 400px;
+    height: auto;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #c0c0c0;
+    margin: 10px;
+}
+
+.main .about_me {
+    width: 475px;
+    height: 270px;
+    margin: 10px;
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    background: linear-gradient(to left, #dbccdb, #fefdfe);
+}
+
+.main .about_me h3 {
+    background: radial-gradient(ellipse, gray, silver);
+    color: white;
+    padding: 7.5px;
+}
+
+.main a {
+    padding-left: 10px;
+}
+
+.main p {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.main .projects {
+    width: 290px;
+    height: 600px;
+    display: inline-block;
+    vertical-align: top;
+    background: linear-gradient(to left, #dbccdb, #fefdfe);
+    margin-right: 20px;
+}
+
+.main .projects h3 {
+    background: radial-gradient(ellipse, gray, silver);
+    color: white;
+    padding: 7.5px;
+}
+
+.projects img {
+    padding: 0px;
+    margin: 0px;
+    width: 290px;
+    height: auto;
+    border: none;
+}
+
+.main .projects h4 {
+    background: radial-gradient(ellipse, gray, silver);
+    color: white;
+    padding: 7.5px;
+}
+
+.badge {
+    padding: 5px;
+}
+
+.badge li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.badge img {
+    width: 40px;
+    height: 40px;
+}
+
+.projects button {
+    background-color: #407c60;
+    color: white;
+    border-style: solid;
+    padding: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 4px;
+    margin: 10px 90px;
+    font-weight: 800;
+    box-shadow:
+}
+
+#footer {
+    width: 925px;
+    height: 40px;
+    padding: 5px;
+}
+
+#footer p {
+    margin: 20px 0px 5px 325px;
+    width: 250px;
+}
+
+#footer a {
+    color: black;
+    margin: 0px;
+}
+
+#footer ul {
+    width: 400px;
+    margin: auto;
+}
+
+#footer ul li {
+    display: inline-block;
+}
+
+#footer img {
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin: 0px;
+}
