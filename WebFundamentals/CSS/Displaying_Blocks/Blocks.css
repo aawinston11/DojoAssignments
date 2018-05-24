@@ -1,0 +1,24 @@
+.wrapper {
+    background: #d5d2ae;
+    width: 800px;
+    border: solid 2px black;
+}
+
+img {
+    width: 120px;
+    margin: 10px;
+}
+
+.header {
+    margin-bottom: 10px;
+    display: inline;
+}
+
+div {
+    display: inline-block;
+}
+
+.header img {
+    background: white;
+    width: 100px;
+}

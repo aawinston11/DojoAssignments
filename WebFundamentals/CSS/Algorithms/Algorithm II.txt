@@ -1,0 +1,10 @@
+Algorithm II
+
+1. prints 2 3 2 3
+2. prints 12
+3. prints 3 7
+4. prints 15 15 10 10
+5. prints 0 2 4 6 8 10 12 14
+6. prints 0 0 0 1 0 2
+7. prints 0 0 0 0 1 2 0 2 4
+8. prints 0 0 0 0 0 0 1 2 3 4 0 2 4 6 8

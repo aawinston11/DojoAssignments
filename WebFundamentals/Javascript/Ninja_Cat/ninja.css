@@ -1,0 +1,9 @@
+.wrapper {
+    width: 350px;
+}
+
+img {
+    display: inline;
+    width: 200px;
+    margin: 5px;
+}

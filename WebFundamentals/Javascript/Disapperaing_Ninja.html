@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Disappering Ninja</title>
+    <link rel="stylesheet" type="text/css" href="ninja.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('img').click(function() {
+                $(this).hide();
+            });
+            $("button").click(function() {
+                $('img').show("slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h3>jQuery - Disappering Ninja</h3>
+        </div>
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <img src="flagpic.jpg" alt="pic of flag football player">
+        <div>
+            <button>Restore</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 970px;
+    margin: 0px;
+}
+
+.header {
+    padding: 10px;
+}
+
+img {
+    display: inline-block;
+    width: 200px;
+    margin: 5px;
+    border: solid 3px black;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    margin: 15px;
+    color: white;
+    font-size: 14px;
+    background-color: green;
+}

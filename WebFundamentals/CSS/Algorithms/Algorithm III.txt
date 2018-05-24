@@ -1,0 +1,10 @@
+Algorithm II
+
+1. returns 5
+2. prints [2,2,5], returns [2,2,5], prints [6,8,5], returns [6,8,5]
+3. prints [2,2,5]
+4. prints true
+5. prints [Coding, Coding, Coding, Coding]
+6. prints [5, Coding, Dojo, 4]
+7. returns 10
+8. BLANK... function never called
