@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pokemon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="PokeDex.css" />
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //list all 151 pokemon
+            for (var i = 1; i <= 151; i++) {
+                $('#poke').append('<img id =' + [i] + ' src = "https://pokeapi.co/media/img/' + [i] + '.png">');
+            }
+
+            //gather pokemon info on click
+            $('#poke').on("click", 'img', (function() {
+                var pokeid = $(this).attr('id');
+                var pokeinfo = "";
+                console.log(pokeid);
+
+                //pull pokemon info from API
+                $.get("https://pokeapi.co/api/v2/pokemon/" + pokeid + "/", function(res) {
+                    console.log(res);
+
+                    //make first letter of pokeman name capitalized
+                    var pokename = ""
+                    for (var i = 0; i < res.name.length; i++) {
+                        if (i == 0) {
+
+                            pokename += res.name[i].toUpperCase();
+                        } else pokename += res.name[i];
+                    }
+                    pokeinfo += '<h2>' + pokename + '</h2>';
+
+                    //pull pokemopn pic, type, height and weight
+                    pokeinfo += '<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokeid + '.png">';
+                    pokeinfo += '<h3>Types</h3>';
+                    for (var i = 0; i < res.types.length; i++) {
+                        pokeinfo += "<li>" + res.types[i].type.name + "</li>";
+                    }
+                    pokeinfo += '<h3> Height </h3>';
+                    pokeinfo += res.height
+                    pokeinfo += '<h3> Weight </h3>';
+                    pokeinfo += res.weight
+
+                    //push all pokemon info into the pokedex 
+                    $("#pokedex").html(pokeinfo);
+                }, "json");
+            }));
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="poke"></div>
+
+        <div id="pokedex"></div>
+    </div>
+</body>
+
+</html>

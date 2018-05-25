@@ -1,0 +1,30 @@
+#poke {
+    width: 60%;
+    display: inline-block;
+}
+
+#pokedex {
+    width: 200px;
+    height: 500px;
+    border: solid 40px red;
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: solid 90px red;
+    position: fixed;
+    top: 20px;
+    padding: 15px;
+}
+
+#pokedex img,
+h2 {
+    margin-left: 30px;
+}
+
+#pokedex li {
+    margin-left: 25px;
+}
+
+
+/* #wrapper {
+    width: 800px;
+} */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Whats The Weather Back Home???</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //pull information from search request
+            $('form').submit(function() {
+                var city = $('input').val();
+                //attach city to the api url
+                var apilink = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&&appid=1318912c3ddeff67164611a297c27b19";
+                var apiinfo = "";
+
+                //pull info from API
+                $.get(apilink, function(res) {
+                    console.log(res);
+                    //attach city name
+                    apiinfo += "<h1>" + res.name + "</h1>";
+
+                    //convert Kelvin to Faren and round to neareast integer
+                    var temp = Math.round(res.main.temp * 9 / 5 - 459.67);
+                    apiinfo += "<h3> Temperature: " + temp + "</h3>";
+
+                    //push all info to weather div in body of html
+                    $("#weather").html(apiinfo)
+                }, 'json');
+
+                // return false to stop page from refreshing
+                return false;
+            });
+        });
+    </script>
+
+    <body>
+        <div id="wrapper">
+            <form>
+                <input type="text" name="city" placeholder="Enter city here">
+                <input type="submit" value="Search Weather" id="submitbutt">
+            </form>
+            <div id="weather">
+
+            </div>
+        </div>
+    </body>
+
+</html>
