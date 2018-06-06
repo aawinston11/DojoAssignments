@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Hover In and Out</title>
+    <link rel="stylesheet" type="text/css" href="Hover_In.css">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('img').hover(
+                function() {
+                    var hover = $(this).attr('src');
+                    $(this).attr('src', $(this).attr('alt'));
+                    $(this).attr('alt', hover);
+                },
+                function() {
+                    var hover = $(this).attr('src');
+                    $(this).attr('src', $(this).attr('alt'));
+                    $(this).attr('alt', hover);
+                })
+        });
+    </script>
+</head>
+
+<body>
+    <div id='wrapper'>
+        <h2>Hover In/Out</h2>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+        <img src="flagpic.jpg" alt="w.jpg" temp="" ;>
+    </div>
+
+</body>
+
+</html>
