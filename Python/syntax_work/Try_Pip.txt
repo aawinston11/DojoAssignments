@@ -1,0 +1,15 @@
+1. pip install Django==1.11.9 did not work initally. I had to add --user to the end in order for Django to successfully install.
+
+2. pip list prints all of the installed packages
+
+3. pip install Django==1.11.9 return that the requirements are already satisifed. This indicates that Django has already been installed.
+
+4. pip freeze prints all of the the installed packages in their required format. These packages need to be in this required format in order for pip to understand also known as requirements format. 
+
+5. pip freeze > requirements.txt creates a text file that includes all of the freeze information.
+
+6. pip uninstall Django uninstalls the indicated package. Terminal confirms the uninstall with a y/n prompt before executing the uninstall.
+
+7. pip show Django returns nothing because we have unintalled Django
+
+8. pip search Flask searches for all Flask packages and prints a list of all of these packages. 
