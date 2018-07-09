@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    {% with errors = get_flashed_messages(category_filter=["error"]) %} {% if errors %} {% for error in errors %}
+    <p style="color:red">Error: {{error}}</p>
+    {% endfor %}
+    <p style="color: red"><strong>Failed to submit. Ensure errors are corrected and resubmit form.</strong></p>
+    {% endif %} {% endwith %} {% with messages = get_flashed_messages(category_filter=["message"]) %} {% if messages %} {% for message in messages %}
+    <p style="color:green"> {{message}}</p>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <h1>Registration Form</h1>
+    <form action="/result" method="POST">
+        Enter a valid email address: <input type="text" name="email" style="display: inline;">
+        <br> Enter First Name: <input type="text" name="fname" style="display: inline;">
+        <br> Enter Last Name: <input type="text" name="lname" style="display: inline;">
+        <br> Enter Password: <input type="password" name="password" style="display: inline;">
+        <br> Re-Enter Password: <input type="password" name="confirm_password" style="display: inline;">
+        <br> Birthday <input type="date" name="birthday" style="display: inline;">
+        <br>
+        <input type="submit" value="Submit!">
+    </form>
+</body>
+
+</html>
